@@ -1,0 +1,302 @@
+<html lang="en">
+<title> Spectrum</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-glass.css" />
+<link rel="shortcut icon" type="jpeg" href="favicon.jpeg"/>
+<script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+@font-face {
+  font-family: imsogay; src: url('imsogay.ttf');
+}
+.responsive {
+  width: 100%;
+  height: auto%;
+}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-none w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#cd9aca">Home</a>
+    <a href="events.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large" style="background-color:#9fc2d0"> Events </a>
+    <a href="allyweek.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large" style="background-color:#9fe19f"> Ally Week</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large" style="background-color:#fade78"> About</a>
+    <a href="definitions.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large" style="background-color:#feb342"> Definitions </a>
+    <a href="keytopics.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large" style="background-color:#ff6663"> For Parents</a>
+    <a href="artpage.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large" style="background-color:#f7c4c1"> Artworks </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-large w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#cd9aca">Home</a>
+    <a href="events.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#9fc2d0"> Events </a>
+    <a href="allyweek.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#9fe19f"> Ally Week</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#fade78"> About</a>
+    <a href="definitions.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#feb342"> Definitions</a>
+    <a href="keytopics.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#ff6663">  For Parents</a>
+    <a href="artpage.html" class="w3-bar-item w3-button w3-padding-large" style="background-color:#f7c4c1"> Artworks</a>
+  </div>
+</div>
+
+<br>
+<br>
+  <img src="banner.png" alt="Banner" class="responsive">
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-right">
+      <img style="position:absolute; TOP:360px; LEFT:1050px;" src="valentines.png" length="300" width="300" >
+       </div>
+      <h1 style="font-family:'Adamina', serif; font-size:40px"> Current/Coming Events </h1>
+      <h5 class="w3-padding-32">
+
+
+      <ul>  <li> Discussion Panel - Every first friday of the month (except February & June)  </li>
+
+        <li> Ally Week - 28th March to 1st April</li>
+      </ul>
+
+       </h5>
+
+
+<div class="w3-left" id="color-calendar">
+
+</div>
+
+<div class="w3-right">
+  <img style="position:absolute; TOP:590px; right:420px;"src="posterally.png" length="300" width="300">
+   </div>
+    </div>
+
+  </div>
+
+<!-- Second Grid -->
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
+    <h1 class="w3-margin" style="color:#f2d94e; font-family:imsogay; font-size:90px"> <i> Spectrum 2022 </i> </h1>
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+
+new Calendar({
+   id: '#color-calendar',
+   calendarSize: 'large',
+   eventsData:[
+   {
+       start: '2022-01-07T06:00:00',
+       end: '2022-01-07T20:30:00',
+       name: 'Event 1',
+       url: 'https://www.cssscript.com',
+   },{
+       start: '2022-01-14T06:00:00',
+       end: '2021-01-14T20:30:00',
+       name: 'Event 2',
+       url: 'https://www.cssscript.com',
+   },{
+       start: '2022-01-21T06:00:00',
+       end: '2021-01-21T20:30:00',
+       name: 'hah',
+       url: 'https://www.cssscript.com',
+     },{
+         start: '2022-01-28T06:00:00',
+         end: '2022-01-28T20:30:00',
+         name: 'Event 4',
+         url: 'https://www.cssscript.com',
+       },{
+             start: '2022-02-04T06:00:00',
+             end: '2022-02-04T20:30:00',
+             name: 'Event 5',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-02-11T06:00:00',
+             end: '2022-02-11T20:30:00',
+             name: 'Panel',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-02-18T06:00:00',
+             end: '2022-02-18T20:30:00',
+             name: 'Event 7',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-02-25T06:00:00',
+             end: '2022-02-25T20:30:00',
+             name: 'Event 8',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-02-14T06:00:00',
+             end: '2022-02-14T20:30:00',
+             name: 'Valentines',
+             url: 'https://www.cssscript.com',
+       },{
+
+       },{
+             start: '2022-03-04T06:00:00',
+             end: '2022-03-04T20:30:00',
+             name: 'Event 9',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-03-11T06:00:00',
+             end: '2022-03-11T20:30:00',
+             name: 'Event 10',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-03-18T06:00:00',
+             end: '2022-03-18T20:30:00',
+             name: 'Event 11',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-03-25T06:00:00',
+             end: '2022-03-25T20:30:00',
+             name: 'Event 12',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-03-28T06:00:00',
+             end: '2022-03-28T20:30:00',
+             name: 'Ally Week',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-03-29T06:00:00',
+             end: '2022-03-29T20:30:00',
+             name: 'Ally Week',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-03-30T06:00:00',
+             end: '2022-03-30T20:30:00',
+             name: 'Ally Week',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-03-31T06:00:00',
+             end: '2022-03-31T20:30:00',
+             name: 'Ally Week',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-04-01T06:00:00',
+             end: '2022-04-01T20:30:00',
+             name: 'Ally Week',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+             start: '2022-04-08T06:00:00',
+             end: '2022-04-08T20:30:00',
+             name: 'Event 13',
+             url: 'https://www.cssscript.com',
+       },{
+       },{
+              start: '2022-04-15T06:00:00',
+              end: '2022-04-15T20:30:00',
+              name: 'Event 14',
+              url: 'https://www.cssscript.com',
+        },{
+        },{
+              start: '2022-04-22T06:00:00',
+              end: '2022-04-22T20:30:00',
+              name: 'Event 15',
+              url: 'https://www.cssscript.com',
+        },{
+        },{
+              start: '2022-04-29T06:00:00',
+              end: '2022-04-29T20:30:00',
+              name: 'Event 16',
+              url: 'https://www.cssscript.com',
+        },{
+        },{
+              start: '2022-05-06T06:00:00',
+              end: '2022-05-06T20:30:00',
+              name: 'Event 17',
+              url: 'https://www.cssscript.com',
+        },{
+        },{
+              start: '2022-05-13T06:00:00',
+              end: '2022-05-13T20:30:00',
+              name: 'Event 18',
+              url: 'https://www.cssscript.com',
+        },{
+        },{
+              start: '2022-05-20T06:00:00',
+              end: '2022-05-20T20:30:00',
+              name: 'Event 19',
+              url: 'https://www.cssscript.com',
+        },{
+        },{
+              start: '2022-05-27T06:00:00',
+              end: '2022-05-27T20:30:00',
+              name: 'Event 20',
+              url: 'https://www.cssscript.com',
+        },{
+        },{
+              start: '2022-06-03T06:00:00',
+              end: '2022-06-03T20:30:00',
+              name: 'Event 21',
+              url: 'https://www.cssscript.com',
+        },{
+
+
+
+
+
+   },
+],
+theme: 'glass',
+ primaryColor: '#6284f5',
+ headerBackgroundColor: '#b1b1f2',
+ dateChanged: (currentDate, events) => {
+   const events_display = document.querySelector('.events-display');
+   let events_html = '';
+   console.log(currentDate, events);
+   events.forEach(event => {
+     events_html += `
+       <div class="event">
+         <div class="event-left">
+           <div class="event-title">${event.name}</div>
+           <a href="${event.url}" target="_blank" class="event-url">${event.url}</a>
+         </div>
+       </div>
+     `
+   });
+   if(events_html) {
+     events_display.innerHTML = events_html;
+   } else {
+     events_display.innerHTML = '<div class="no-events-text">No events on this day :(</div>';
+   }
+ }
+})
+</script>
+
+
+</body>
+</html>
